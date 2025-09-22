@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: Impact, fantasy;
+}
+body{
+    color: azure;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* padding-top: -30; */
+}
+
+.botones{
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+}
+
+.botones a{
+    background-color: #fbb917;
+    border: 2px solid #ffffc2;
+    padding: 9px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+
+}
+
+.botones a:focus{
+    background-color: #ffe87c;
+}
+
+.greetings{
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 5.5rem;
+    font-weight: 800;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #f4f482, 0 0 50px #ffffc2, 0 0 100px #fdd017;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+.greetings > span:nth-child(6){
+    animation-delay: 1s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: "Lucida Handwriting", cursive;
+}
+
+.button a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: #111;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .description{
+        font-size: 2rem;
+    }
+
+    .button a{
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+.card {
+  position: relative;
+  width: 650px;
+  height: 450px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 15px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  margin-top: 20%;
+  margin-bottom: 5%;
+  align-items: center;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #ffff00 20%, #ffffe0 100% );
+  transform: scale(0.5);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  width: 650px;
+  height: 450px;
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #ffe87c 20%, #ffff00 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(57px);
+}
+
+.heading {
+  font-size: 21px;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: Impact, fantasy;
+  margin: 0 auto;
+  z-index: 9;
+}
+
+.card p:not(.heading) {
+  font-size: 15px;
+  font-family: Impact, fantasy;
+  color: #00FF7F;
+  z-index: 9;
+}
+
+.card p:last-child {
+  color: #e81cff;
+  font-weight: 600;
+  font-family: Impact, fantasy;
+}
+
+.card:hover::after {
+  filter: blur(90px);
+}
+
+.card:hover::before {
+  transform: rotate(-90deg) scaleX(0.72) scaleY(1.44);
+}
+
+.circulo {
+  width: 260px;
+  height: 170px;
+  border-radius: 1%;
+  margin-bottom: 50px;
+}
